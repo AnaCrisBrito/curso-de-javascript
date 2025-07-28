@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar cor ao passar o mouse</title>
+    <style>
+        body{
+            background-color: rgb(197, 159, 234);
+            font: normal 20pt Arial;
+            color: white;
+        }
+
+        #cor{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 0, 0, 0.616);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="cor" onmouseenter="entra()" onmouseout="Sai()"></div>
+
+    <script src="mudar_cor.js"></script>
+</body>
+</html>

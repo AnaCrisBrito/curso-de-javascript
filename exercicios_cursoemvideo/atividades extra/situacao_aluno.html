@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do Aluno</title>
+</head>
+<body>
+    <h1>Situação do Aluno</h1>
+    <button onclick="iniciar()">Entrar com as notas</button>
+    <h1 id="texto"></h1>
+    <p id="res">Clique no botão acima para informar as nnotas do aluno.</p>
+    <p id="p1"></p>
+   
+
+    <script>
+        function iniciar(){
+            var nome = prompt("Qual é o nome do aluno? ");
+            var nota1 = Number(prompt(`Primeira nota de ${nome}: `));
+            var nota2 = Number(prompt(`Segunda nota de ${nome}: `));
+            var res = document.getElementById("res");
+            var media = (nota1 + nota2) / 2;
+            var texto = document.getElementById("texto");
+            var p1 = document.getElementById("p1");
+
+            texto.innerHTML += `Analisando a situação de ${nome}`;
+            if(media < 3){
+                res.innerHTML += `Com notas ${nota1} e ${nota2}, a média é <strong>${media}</strong>.`;
+                p1.innerHTML  += `Com média abaixo de 3,0 o aluno está REPROVADO`;
+            }else if(media == 3 || media <= 6){
+                  res.innerHTML += `Com notas ${nota1} e ${nota2}, a média é <strong>${media}</strong>.`;
+                  p1.innerHTML  += `Com média abaixo entre 3,0 e 6,0 o aluno está em RECUPERAÇÃO`;
+            }else if(media > 6){
+                 res.innerHTML += `Com notas ${nota1} e ${nota2}, a média é <strong>${media}</strong>.`;
+                  p1.innerHTML  += `Com média acima de 6,0 o aluno está APROVADO`;
+            }
+        }
+
+    </script>
+</body>
+</html>

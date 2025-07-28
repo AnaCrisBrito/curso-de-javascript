@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando troco</title>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <button id="botao" onclick="iniciar()">Comprar produto</button>
+
+    <script>
+        function iniciar(){
+            var nomeProduto = prompt("Que produto você está comprando?");
+            var precoProduto = Number(prompt(`Quanto custa ${nomeProduto} que você está comprando?`));
+            var dinheiro = Number(prompt(`Qual foi o valor que você deu para pagar ${nomeProduto}?`));
+            var troco = dinheiro - precoProduto;
+            alert(`
+            Você comprou ${nomeProduto} que custou R$ ${precoProduto}. 
+            Deu R$ ${dinheiro} em dinheiro e vai receber R$ ${troco} de troco.
+            Volte Sempre!`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JavaScritp</title>
+    <style>
+        body{
+            background-color: rgb(189, 144, 231);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+        div#area{
+            background-color: rgb(203, 28, 127);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" onmousedown="baixo()" onmouseup="cima()" >
+        interaja...
+    </div>
+    
+    <script src="Eventos.js"></script>
+</body>
+</html>

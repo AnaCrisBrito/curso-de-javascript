@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="iniciar()">Calcular</button>
+    <h1 id="texto"></h1>
+    <p id="p1">Considerando uma equação no formato ax² + bx + c = 0, aperte o botão acima para calcular o valor de 🛆. </p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+    <script>
+        function iniciar(){
+            var a = Number(prompt("Qual é o valor de a?"));
+            var b = Number(prompt("Qual é o valor de b?"));
+            var c = Number(prompt("Qual é o valor de c?"));
+            var delta = b ** 2 - 4 * a * c;
+            var texto = document.getElementById("texto");
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+            texto.innerHTML=`Resolvendo Bhaskara`;
+            p1.innerHTML=`A equação ${a}x² + ${b}x + ${c} = 0`;
+            p2.innerHTML=`O calculo realizado será 🛆 = ${c}² - 4 . ${a} . ${c}`;
+            p3.innerHTML=`O valor calculado foi 🛆 = ${delta}`;
+
+        }
+    </script>
+</body>
+</html>

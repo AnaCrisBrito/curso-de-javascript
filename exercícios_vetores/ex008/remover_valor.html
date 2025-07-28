@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Valor</title>
+</head>
+
+<body>
+    <h1>Remover Valor</h1>
+    <p id="res"></p>
+
+
+    <script>
+        var nomes = ["Amanda", "Ana", "Vitória", "Luiza", "Maria", "Lorrany", "Natália", "Kailane"];
+
+
+        var nomeUsua = prompt("Digite um nome: ");
+        var remover = nomes.indexOf(nomeUsua);
+        if(remover > -1){
+            nomes.splice(remover, 1);
+        };
+        var res = document.getElementById("res");
+        res.innerHTML = nomes;
+    </script>
+</body>
+
+</html>

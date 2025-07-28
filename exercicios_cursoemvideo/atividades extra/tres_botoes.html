@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Três botões</title>
+    <style>
+        body{
+            background-color: rgb(48, 46, 46);
+            color:rgb(181, 177, 177);
+            font: italic 20pt Times;
+            text-align: center;
+
+        }
+        button{
+            background-color: rgba(31, 33, 164, 0.707);
+            color: white;
+            border-radius: 5px;
+            font: normal 12pt Times;
+            box-shadow: 1px 2px 5px rgb(35, 35, 35);
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das Mensagens</h1>
+    <button id="botao1" onclick="botao1()">Botão 1</button>
+    <button id="botao2" onclick="botao2()">Botão 2</button>
+    <button id="botao3" onclick="botao3()">Botão 3</button>
+
+    <script>
+        function botao1(){
+            var botao1 = document.getElementById("botao1");
+            alert("Você clicou no 1° botão!");
+        }
+
+        function botao2(){
+            var botao2 = document.getElementById("botao2");
+            alert("Você clicou no 2° botão!");
+        }
+
+        function botao3(){
+            var botao3 = document.getElementById("botao3");
+            alert("Você clicou no 3° botão!")
+        }
+    </script>
+</body>
+</html>

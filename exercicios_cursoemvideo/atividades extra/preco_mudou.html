@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O preço mudou</title>
+</head>
+
+<body>
+    <h1>O preço Mudou</h1>
+    <button onclick="verificar()">Verificar</button>
+    <h1 id="texto"></h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+        function verificar() {
+            var precoAntes = Number(prompt("Qual era o preço anterior do produto? "));
+            var precoDepois = Number(prompt("Qual é o preço atual do produto? "));
+            var texto = document.getElementById("texto");
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+            var p4 = document.getElementById("p4");
+
+            texto.innerHTML += `Analisando os valores informados:`;
+            p1.innerHTML += `O produto custava R$ ${precoAntes.toFixed(2)} e agora custa R$ ${precoDepois.toFixed(2)} `;
+
+            if (precoAntes > precoDepois) {
+                var res = precoAntes - precoDepois;
+                var porcentagem = ((precoDepois - precoAntes) / precoAntes) * 100;
+
+                p2.innerHTML += `O produto hoje está mais barato!`;
+                p3.innerHTML += `O preço caiu R$ ${res.toFixed(2)}, em relação ao preço anterior.`;
+                p4.innerHTML += `Uma variação de ${porcentagem.toFixed(2)} pra baixo.`;
+            } else if (precoAntes < precoDepois) {
+                var res1 = precoDepois - precoAntes;
+                var porcentagem = ((precoDepois - precoAntes) / precoAntes) * 100;
+                p2.innerHTML += `O produto hoje está mais caro!`;
+                p3.innerHTML += `O preco subiu R$ ${res1} em relação ao preço anterios.`;
+                p4.innerHTML += `Uma variação de ${porcentagem.toFixed(2)} % pra cima.`;
+            }
+        }
+    </script>
+</body>
+
+</html>

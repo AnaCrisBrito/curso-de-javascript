@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monetário</title>
+</head>
+<body>
+    <h1>Conversor de R$ para US$</h1>
+    <button onclick="iniciar()">Converter</button>
+    <p id="texto">Clique no botão acima para iniciar.</p>
+    <script>
+        var dolarHoje =Number(prompt("Antes de mais nada, quanto está a cotação do dólar agora?"));
+
+        function iniciar(){
+            var carteira = Number(prompt("Quantos R$ você tem na carteira?"));
+            var conversao = carteira / dolarHoje;
+            var texto = document.getElementById("texto");
+            texto.innerHTML=`Com R$ ${carteira} você consgue comprar US$ ${conversao.toFixed(2)}.`
+        }
+    </script>
+</body>
+</html>
